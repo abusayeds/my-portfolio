@@ -21,7 +21,7 @@ export default {
           shadowOne: "10px 10px 19px #1c1e22, -10px -10px 19px #262a2e"
         },
         animation: {
-          'bounce-slow': 'bounce 3s infinite', // Adjust the duration as needed
+          'bounce-slow': 'bounce 3s infinite', 
         },
       },
     },

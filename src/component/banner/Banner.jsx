@@ -1,7 +1,5 @@
-
-
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { images } from "../../assets/images";
+
 import { useState } from "react";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 
@@ -49,18 +47,18 @@ const Banner = () => {
           <div className="w-3/2 flex flex-col md:gap-16 gap-12">
             <div className="text-white flex flex-col gap-6">
               <h4>WELCOME TO MY WORLD</h4>
-              <h1 className="md:text-6xl text-3xl font-bold">
+              <h1 className="md:text-6xl text-3xl font-bold font-serif">
                 Hi, I 'am <span className="text-designColor">Abu Sayed</span>{" "}
               </h1>
               <h2 className="md:text-4xl font-bold text-white">
-                <span>{text}</span>
+                <span className=" font-titlefont">{text}</span>
                 <Cursor
                   cursorBlinking={false}
                   cursorStyle="|"
                   cursorColor="#ff014"
                 />
               </h2>
-              <h3>
+              <h3 className=" font-titlefont">
                 Welcome to my portfolio! I'm a passionate front-end developer
                 with a keen eye for design and a love for creating user-friendly
                 web experiences. Here, you'll find a showcase of my work,
@@ -68,45 +66,33 @@ const Banner = () => {
               </h3>
             </div>
 
-            <div className="md:flex justify-between">
-              <div className=" w-1/2 flex justify-between md:justify-around md:items-center gap-4">
-                <div className="flex gap-8">
-                  <a
-                    href="https://www.facebook.com/profile.php?id=100074503997052"
-                    target="blank"
-                  >
-                    <span className="IconClass">
-                      <FaFacebook />
-                    </span>
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/abu-sayed96/"
-                    target="_blank"
-                  >
-                    <span className="IconClass">
-                      <FaLinkedin />
-                    </span>
-                  </a>
-                  <a href="https://github.com/abusayeds" target="_blank">
-                    <span className="IconClass">
-                      <BsGithub />
-                    </span>
-                  </a>
-                </div>
-                <div className=" text-xs  md:text-base   p-2 bg-gradient-to-r  from-blue-600 to-bodyColor hover:opacity-100 opacity-85 text-white  rounded flex items-center justify-center font-titlefont gap-2">
-                  <button onClick={() => setIsModalOpen(true)}>RESUME</button>
-                  <BsArrowBarDown className=" animate-bounce  duration-500"></BsArrowBarDown>
-                </div>
+            <div className=" flex gap-5">
+              <a
+                href="https://www.facebook.com/profile.php?id=100074503997052"
+                target="blank"
+              >
+                <span className="IconClass">
+                  <FaFacebook />
+                </span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/abu-sayed96/"
+                target="_blank"
+              >
+                <span className="IconClass">
+                  <FaLinkedin />
+                </span>
+              </a>
+              <a href="https://github.com/abusayeds" target="_blank">
+                <span className="IconClass">
+                  <BsGithub />
+                </span>
+              </a>
+              <div className=" text-xs  md:text-base   p-2 bg-green-600 to-bodyColor hover:opacity-100 opacity-85 text-white  rounded flex items-center justify-center font-titlefont gap-2">
+                <button onClick={() => setIsModalOpen(true)}>RESUME</button>
+                <BsArrowBarDown className=" animate-bounce  duration-500"></BsArrowBarDown>
               </div>
             </div>
-          </div>
-
-          <div className="hidden m-5 md:mt-0 w-full md:w-1/2 md:flex justify-center items-center">
-            <img
-              className="mr-5 md:animate-bounce-slow md:opacity-50 rounded-full max-w-full h-auto"
-              src={images.mern}
-              alt="MERN stack logo"
-            />
           </div>
         </div>
       </div>

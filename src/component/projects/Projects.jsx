@@ -1,7 +1,7 @@
 import { images } from "../../assets/images";
 import Title from "../layout/Title";
 import ProjectsCard from "./ProjectsCard";
-
+import "./project.css";
 const Projects = () => {
   return (
     <section
@@ -15,10 +15,20 @@ const Projects = () => {
         ></Title>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <ProjectsCard
+          title="Car wash system"
+          technology="Java-Scrip , React js , Redux and Tailwind css "
+          backend=" Mongodb , mongoose and Nosql database system "
+          Scode="https://github.com/abusayeds/car-wash-server"
+          Fcode="https://github.com/abusayeds/car-was-client"
+          Lcode="https://car-was-client.vercel.app/"
+          des="In this project I used custom authentication and use that  JWT  . And an admin dashboard has been created to  manage the website . All the APIs I call through the RTK query are fetch the data . Added functionality where user can update his own profile and so that they can manage order and service . And there many other functionalities"
+          img={images.carProject}
+        ></ProjectsCard>
         <ProjectsCard
           title="Fitness"
-          useTools=" Java Script, React js, Redux"
-          DesignTools="Tailwind && Shadcn"
+          technology=" Java Script, React js, Redux , Tailwind && Shadcn "
+          backend=" Mongodb ,  Mongoose and Nosql Database "
           Scode="https://github.com/abusayeds/Fitness-server"
           Fcode="https://github.com/abusayeds/Fitness-client"
           Lcode="https://fitness-client-theta.vercel.app/"
@@ -28,9 +38,9 @@ const Projects = () => {
           img={images.fitness}
         ></ProjectsCard>
         <ProjectsCard
-          title=" Food-server project"
-          useTools=" Java Script, React js, mongoDB,"
-          DesignTools=" CSS && Tailwind"
+          title=" Food-server"
+          technology=" Java Script, React js, "
+          backend="Express js and mongodb"
           Scode="https://github.com/abusayeds/food-server"
           Fcode="https://github.com/abusayeds/food-order"
           Lcode="https://food-order-react-project.netlify.app/"
@@ -38,16 +48,7 @@ const Projects = () => {
            tables to make them feel comfortable and provide a hospitable environment, delivering food on time and at the correct temperature."
           img={images.foodProject}
         ></ProjectsCard>
-        <ProjectsCard
-          title="Today News"
-          useTools=" Java Script,"
-          DesignTools=" CSS && Tailwind"
-          Fcode="https://github.com/abusayeds/Today-News"
-          Lcode="https://652132da47086d6249413de6--lively-tapioca-63bbba.netlify.app/"
-          des="A project description outlines the details of one project, including all its phases and processes involved, in a single document.
-           It addresses the problem that initiated the project and the desired goals and objectives. But it doesn't have to stop there"
-          img={images.newsProject}
-        ></ProjectsCard>
+      
       </div>
     </section>
   );

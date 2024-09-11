@@ -1,4 +1,4 @@
-import { FaFacebook, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaLinkedin,  FaWhatsapp } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 import { navlinks } from "../../constants";
 import { Link } from "react-scroll";

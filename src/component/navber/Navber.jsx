@@ -7,21 +7,28 @@ import { navlinks } from "../../constants/index.jsx";
 
 const Navber = () => {
   const [open, setOpen] = useState(false);
-  const [scrollColor, setScrollColor] = useState(false)
-  
+  const [scrollColor, setScrollColor] = useState(false);
+
   const hendelScrollColor = () => {
-   if(window.scrollY >= 125     ) {
-       setScrollColor(true)
-   }
-   else{
-       setScrollColor(false)
-   }
-  }
-  window.addEventListener("scroll", hendelScrollColor)
+    if (window.scrollY >= 125) {
+      setScrollColor(true);
+    } else {
+      setScrollColor(false);
+    }
+  };
+  window.addEventListener("scroll", hendelScrollColor);
   return (
-    <main className={`md:px-4 px-5 border-b shadow-shadowOne border-gray-500 h-24  sticky top-0 z-50 flex justify-between items-center font-titlefon ${scrollColor ? ' bg-black border-none' : ' bg-bodyColor transition ease-in-out delay-150 duration-500'} `}>
+    <main
+      className={`md:px-4 px-5 border-b shadow-shadowOne border-gray-500 h-24  sticky top-0 z-50 flex justify-between items-center font-titlefon ${
+        scrollColor
+          ? " bg-black border-none"
+          : " bg-bodyColor transition ease-in-out delay-150 duration-500"
+      } `}
+    >
       <div>
-        <p className=" text-2xl font-titlefont font-semibold text-designColor uppercase">my_portfolio</p>
+        <p className=" text-2xl  font-serif font-semibold text-designColor uppercase">
+          my_portfolio
+        </p>
       </div>
       <div className="w-full md:hidden flex justify-end items-end">
         <FontAwesomeIcon
@@ -58,7 +65,7 @@ const Navber = () => {
         <ul className="flex flex-col items-center gap-10">
           {navlinks.map((item) => (
             <li
-              className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300"
+              className="text-base font-sans text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300"
               key={item._id}
               onClick={() => setOpen(false)}
             >
