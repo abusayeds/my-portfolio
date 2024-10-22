@@ -1,4 +1,3 @@
-
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { images } from "../../assets/images";
 import Title from "../layout/Title";
@@ -108,10 +107,14 @@ const Contact = () => {
                       </span>
                     </a>
                   </div>
-                  <div className=" text-xs md:text-1xl  md:px-3 p-2 md:py-2 bg-gradient-to-r from-gray-500 to-gray-900 opacity-75 hover:opacity-100 text-white  rounded flex items-center justify-center font-titlefont gap-2">
-                    <button onClick={() => setIsModalOpen(true)}>RESUME</button>
+                  <a
+                    target="_blank"
+                    href="https://drive.google.com/file/d/1MSYhBy5PvLzOAuriFWUeO5pFuh7tW5vG/view?usp=sharing"
+                    className=" text-xs md:text-1xl  md:px-3 p-2 md:py-2  bg-designColor  opacity-75 hover:opacity-100 text-white  rounded flex items-center justify-center font-titlefont gap-2"
+                  >
+                    RESUME
                     <BsArrowBarDown className=" animate-bounce  duration-500"></BsArrowBarDown>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>

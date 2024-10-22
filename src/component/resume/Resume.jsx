@@ -6,11 +6,11 @@ import Expreience from "./Expreience";
 import Achievment from "./Achievment";
 
 const Resume = () => {
-  const [edu, setEdu] = useState(true);
-  const [skills, setSkills] = useState(false);
   const [exp, setExp] = useState(false);
+  const [edu, setEdu] = useState(false);
+  const [resume, setResume] = useState(true);
   const [achievment, setAchievment] = useState(false);
-  
+
   return (
     <section
       id="resume"
@@ -22,32 +22,70 @@ const Resume = () => {
       <div>
         <ul className="w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
           <li
-            onClick={() => setEdu(true) & setSkills(false) & setExp(false) & setAchievment(false)}
-            className={`${edu ? ' border animate-pulse border-designColor rounded-lg ' : 'border-transparent'} resumeLi `}
+            onClick={() =>
+              setResume(true) &
+              setEdu(false) &
+              setExp(false) &
+              setAchievment(false)
+            }
+            className={`${
+              resume
+                ? " border animate-pulse border-designColor rounded-lg "
+                : "border-transparent"
+            } resumeLi `}
+          >
+            Resume
+          </li>
+          <li
+            onClick={() =>
+              setExp(true) &
+              setEdu(false) &
+              setResume(false) &
+              setAchievment(false)
+            }
+            className={`${
+              exp
+                ? " border animate-pulse border-designColor rounded-lg "
+                : "border-transparent"
+            } resumeLi `}
+          >
+            Services
+          </li>
+          <li
+            onClick={() =>
+              setEdu(true) &
+              setResume(false) &
+              setExp(false) &
+              setAchievment(false)
+            }
+            className={`${
+              edu
+                ? " border animate-pulse border-designColor rounded-lg "
+                : "border-transparent"
+            } resumeLi `}
           >
             Education
           </li>
+
           <li
-            onClick={() => setSkills(true) &  setEdu(false) & setExp(false)  & setAchievment(false)}
-            className={`${skills ? ' border animate-pulse border-designColor rounded-lg ' : 'border-transparent'} resumeLi `}
+            onClick={() =>
+              setAchievment(true) &
+              setEdu(false) &
+              setResume(false) &
+              setExp(false)
+            }
+            className={`${
+              achievment
+                ? " animate-pulse border border-designColor rounded-lg "
+                : "border-transparent"
+            } resumeLi `}
           >
-            Professinal Skils
-          </li>
-          <li
-            onClick={() =>  setExp(true) & setEdu(false) & setSkills(false)  & setAchievment(false) }
-            className={`${exp ? ' border animate-pulse border-designColor rounded-lg ' : 'border-transparent'} resumeLi `}
-          >
-            Expreience
-          </li>
-          <li 
-           onClick={() => setAchievment(true) & setEdu(false) & setSkills(false)  &  setExp(false)  }
-           className={`${achievment ? ' animate-pulse border border-designColor rounded-lg ' : 'border-transparent'} resumeLi `}
-          >Achievment
+            Achievment
           </li>
         </ul>
       </div>
       {edu && <Education></Education>}
-      {skills && <Skills></Skills>}
+      {resume && <Skills></Skills>}
       {exp && <Expreience></Expreience>}
       {achievment && <Achievment></Achievment>}
     </section>

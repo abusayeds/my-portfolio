@@ -1,30 +1,35 @@
-import "./App.css";
-import About from "./component/about/About";
-import Banner from "./component/banner/Banner";
-import Contact from "./component/contact/Contact";
-import Features from "./component/features/Features";
-import Footer from "./component/footer/Footer";
-import Navber from "./component/navber/Navber";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Main from "./main/Main";
 
-import Projects from "./component/projects/Projects";
-import Resume from "./component/resume/Resume";
+import Login from "./component/login/Login";
+import Home from "./component/home/Home";
+import ProjectDetails from "./component/projects/ProjectDetails";
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Main />,
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/login",
+          element: <Login />,
+        },
+        {
+          path: "/project-details/:projectId",
+          element: <ProjectDetails />,
+        },
+      ],
+    },
+  ]);
   return (
-    <section>
-      <main className=" w-auto h-auto bg-bodyColor text-lightText md:px-16 px-0">
-        <Navber></Navber>
-        <div className="md:px-0 px-5 ">
-          <Banner></Banner>
-          <Projects></Projects>
-          <Features></Features>
-          <Resume></Resume>
-          <About></About>
-          <Contact></Contact>
-        </div>
-      </main>
-      <Footer></Footer>
-    </section>
+    <div className="app">
+      <RouterProvider router={router}></RouterProvider>
+    </div>
   );
 }
 

@@ -15,7 +15,7 @@ function SampleNextArrow(props) {
   const { onClick } = props;
   return (
     <div
-      className=" w-10 h-8 bg-[#0c1821] hover:bg-black duration-300 rounded-md text-2xl text-gray-400 flex justify-center items-center absolute md:top-6  top-64 md:right-5 right-0 shadow-shadowOne cursor-pointer z-10"
+      className=" w-10 h-8 bg-[#0c1821] hover:bg-black duration-300 rounded-md text-2xl text-gray-400 flex justify-center items-center absolute md:top-6  top-64 md:right-5 right-0  cursor-pointer z-10"
       onClick={onClick}
     >
       <HiArrowRight className=" text-designColor"></HiArrowRight>
@@ -26,7 +26,7 @@ function SamplePrevArrow(props) {
   const { onClick } = props;
   return (
     <div
-      className=" w-10 h-8 bg-[#0c1821] hover:bg-black duration-300 rounded-md text-2xl text-gray-400 flex justify-center items-center absolute md:top-6 top-64 md:right-20  right-16 shadow-shadowOne cursor-pointer z-10"
+      className=" w-10 h-8 bg-[#0c1821] hover:bg-black duration-300 rounded-md text-2xl text-gray-400 flex justify-center items-center absolute md:top-6 top-64 md:right-20  right-16  cursor-pointer z-10"
       onClick={onClick}
     >
       <HiArrowLeft className=" text-designColor"></HiArrowLeft>
@@ -80,10 +80,10 @@ const About = () => {
         <Slider {...settings}>
           <div className="w-full">
             <div className="w-full md:h-[450px] flex justify-between md:gap-5 gap-2">
-              <div className="w-[35%] h bg-gradient-to-r from-[#232b2b] to-[#17191a] hidden md:flex flex-col md:justify-center md:gap-8 rounded-lg md:shadow-shadowOne">
+              <div className="w-[35%] h bg-gradient-to-r from-[#232b2b] to-[#17191a] hidden md:flex flex-col md:justify-center md:gap-8 rounded-lg ">
                 <img
                   className="md:h-72 md:object-none rounded"
-                  src={images.about1}
+                  src="https://i.ibb.co/26cDYTW/108521995.jpg"
                   alt=""
                   style={{
                     backgroundImage:
@@ -109,7 +109,7 @@ const About = () => {
                 <div className="md:hidden">
                   <img
                     className="h-56 rounded w-full object-cover"
-                    src={images.about1}
+                    src="https://i.ibb.co/26cDYTW/108521995.jpg"
                     alt=""
                     style={{
                       backgroundImage:
@@ -185,7 +185,7 @@ const About = () => {
           {/* number2slider */}
           <div className="w-full">
             <div className="w-full md:h-[450px] flex justify-between md:gap-5 gap-2">
-              <div className="w-[35%] h-full bg-gradient-to-r from-[#232b2b] to-[#17191a] hidden md:flex flex-col md:justify-center gap-8 rounded-lg md:shadow-shadowOne">
+              <div className="w-[35%] h-full bg-gradient-to-r from-[#232b2b] to-[#17191a] hidden md:flex flex-col md:justify-center gap-8 rounded-lg ">
                 <img className="md:h-72  rounded" src={images.about2} />
                 <div className="p-5 flex flex-col gap-2">
                   <p className="text-xs uppercase text-designColor tracking-wide mb-2">
@@ -226,7 +226,9 @@ const About = () => {
 
                 <div className="w-full flex flex-col gap-4">
                   <p className="font-semibold font-titlefont tracking-wide md:text-2xl text-xs">
-                  A platform engineering practice that allows developers to independently access, manage and deploy the resources and tools they need
+                    A platform engineering practice that allows developers to
+                    independently access, manage and deploy the resources and
+                    tools they need
                   </p>
                   <p className="text-xs font-titlefont">
                     The services detailed by the Developer during its onboarding
@@ -240,14 +242,18 @@ const About = () => {
                     <CgWebsite className="text-5xl text-designColor opacity-55"></CgWebsite>
                     <p>Web design</p>
                     <p className="text-xs font-titlefont">
-                    Web design involves creating the visual layout and aesthetics of a website, focusing on user experience, graphics, and overall look
+                      Web design involves creating the visual layout and
+                      aesthetics of a website, focusing on user experience,
+                      graphics, and overall look
                     </p>
                   </div>
                   <div className=" flex flex-col gap-3 h-36">
                     <MdDeveloperMode className="text-5xl text-designColor opacity-55"></MdDeveloperMode>
                     <p>Web devlopment</p>
                     <p className="text-xs font-titlefont">
-                    A web developer is a technical professional responsible for building applications and websites hosted on the internet, 
+                      A web developer is a technical professional responsible
+                      for building applications and websites hosted on the
+                      internet,
                     </p>
                   </div>
                 </div>
